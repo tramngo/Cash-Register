@@ -1,9 +1,3 @@
-var nine = document.getElementById('nine');
-nine.addEventListener('click',function(){
-  var textArea = document.getElementById('textArea');
-textArea.innerHTML += '9'; 
-});
-
 var eight = document.getElementById('eight');
 eight.addEventListener('click',function() {
 	var textArea = document.getElementById('textArea');
