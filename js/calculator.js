@@ -1,4 +1,4 @@
-function calculatorModule () {
+const calculator = (function() {
   var calculator = { };
   var _memory = 0;
   var _total = 0; 
@@ -106,4 +106,4 @@ calculator.clearMemory = function() {
 
   
   return calculator;
-}
+});
