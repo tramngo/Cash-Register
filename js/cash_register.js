@@ -110,7 +110,7 @@ divide.addEventListener('click', function() {
 var clear = document.getElementById('clear');
 clear.addEventListener('click', function() {
 	calc.clearMemory=parseFloat(display.innerHTML);
-        display.innerHTML=clearDisplay;
+        display.innerHTML=clearDisplay();
 });
 
 //use if statement to determine what happens when a certain clickOperation is chosen
