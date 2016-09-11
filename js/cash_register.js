@@ -3,11 +3,11 @@ var clickOperation='null';
 var storedNumber = 0;
 var display = document.getElementById('display');
 
+//create and use function to update display
 function updateDisplay(content){
    var display = document.getElementById('display');
    display.innerHTML = display.innerHTML + content;
 }
-
 
 var nine = document.getElementById('nine');
 nine.addEventListener('click',function() {
@@ -69,9 +69,10 @@ dot.addEventListener('click', function() {
 updatedDisplay(.);
 });
 
+//load number, then clear display and then click on operation
 var add = document.getElementById('add');
 add.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML='+');
+	storedNumber=parseFloat(display.innerHTML);
 	calc.load(storedNumber);
 	display.innerHTML = '';
 	clickOperation='add';
@@ -79,7 +80,7 @@ add.addEventListener('click', function() {
 
 var subtract = document.getElementById('subtract');
 subtract.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML='-');
+	storedNumber=parseFloat(display.innerHTML);
 	calc.load(storedNumber);
 	display.innerHTML = '';
 	clickOperation='subtract';
@@ -87,7 +88,7 @@ subtract.addEventListener('click', function() {
 
 var multiply = document.getElementById('multiply');
 multiply.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML='×');
+	storedNumber=parseFloat(display.innerHTML);
 	calc.load(storedNumber);
 	display.innerHTML = '';
 	clickOperation='multiply';
@@ -95,7 +96,7 @@ multiply.addEventListener('click', function() {
 
 var divide = document.getElementById('divide');
 divide.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML='÷');
+	storedNumber=parseFloat(display.innerHTML);
 	calc.load(storedNumber);
 	display.innerHTML = '';
 	clickOperation='divide';
@@ -103,10 +104,11 @@ divide.addEventListener('click', function() {
 
 var clear = document.getElementById('clear');
 clear.addEventListener('click', function() {
-	calc.clearMemory=parseFloat(display.innerHTML='');
+	calc.clearMemory=parseFloat(display.innerHTML);
+        display.innerHTML=clearDisplay;
 });
 
-
+//use if statement to determine what happens when a certain clickOperation is chosen
 var equalSign = document.getElementById('equalSign');
 equalSign.addEventListener('click', function(){
   if(clickOperation === 'add') {
