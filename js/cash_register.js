@@ -104,23 +104,17 @@ clear.addEventListener('click', function() {
 
 var equalSign = document.getElementById('equalSign');
 equalSign.addEventListener('click', function(){
+  if(clickOperation === 'add') {
   storedNumber = parseFloat(display.innerHTML);
-  switch (clickOperation){
-    case 'add':
-      calc.add(storedNumber);
-      break;
-    case 'subtract':
-      calc.subtract(storedNumber);
-      break;
-    case 'multiply':
-      calc.multiply(storedNumber);
-      break;
-    case 'divide':
-      calc.divide(storedNumber);
-      break;
-  }
   display.innerHTML = calc.getTotal();
-
+}if(clickOperation === 'subtract') {
+  storedNumber = parseFloat(display.innerHTML);
+  display.innerHTML = calc.getTotal();
+}if(clickOperation === 'multiply') {
+  storedNumber = parseFloat(display.innerHTML);
+  display.innerHTML = calc.getTotal();
+}if(clickOperation === 'divide') {
+  storedNumber = parseFloat(display.innerHTML);
+  display.innerHTML = calc.getTotal();
 });
-
 
