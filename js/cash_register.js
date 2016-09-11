@@ -1,5 +1,5 @@
 const calc = calculator();
-var operator='null';
+var clickOperation='null';
 var storedNumber = 0;
 var display = document.getElementById('display');
 
@@ -69,7 +69,7 @@ add.addEventListener('click', function() {
 	storedNumber=parseFloat(display.innerHTML='+');
 	calc.load(storedNumber);
 	display.innerHTML = '';
-	operator='add';
+	clickOperation='add';
 });
 
 var subtract = document.getElementById('subtract');
@@ -77,7 +77,7 @@ subtract.addEventListener('click', function() {
 	storedNumber=parseFloat(display.innerHTML='-');
 	calc.load(storedNumber);
 	display.innerHTML = '';
-	operator='subtract';
+	clickOperation='subtract';
 });
 
 var multiply = document.getElementById('multiply');
@@ -85,7 +85,7 @@ multiply.addEventListener('click', function() {
 	storedNumber=parseFloat(display.innerHTML='×');
 	calc.load(storedNumber);
 	display.innerHTML = '';
-	operator='multiply';
+	clickOperation='multiply';
 });
 
 var divide = document.getElementById('divide');
@@ -93,7 +93,7 @@ divide.addEventListener('click', function() {
 	storedNumber=parseFloat(display.innerHTML='÷');
 	calc.load(storedNumber);
 	display.innerHTML = '';
-	operator='divide';
+	clickOperation='divide';
 });
 
 var clear = document.getElementById('clear');
@@ -105,7 +105,7 @@ clear.addEventListener('click', function() {
 var equalSign = document.getElementById('equalSign');
 equalSign.addEventListener('click', function(){
   storedNumber = parseFloat(display.innerHTML);
-  switch (operator){
+  switch (clickOperation){
     case 'add':
       calc.add(storedNumber);
       break;
