@@ -20,8 +20,6 @@ function loadCalcIntoDisplay(){
 
 
 
-
-
 //create and use function to clear display
 function clearDisplay() {
    display.innerHTML = '';
@@ -32,13 +30,43 @@ function addValue(num) {
 	calc.add(num);
 }
 
+//create EventListener for add
+var add = document.getElementById('add');
+add.addEventListener('click', function() {
+updateDisplay('+');
+loadDisplayIntoCalc();
+clickOperation = 'add';
+});
 
+//create EventListener for subtract
+var subtract = document.getElementById('subtract');
+subtract.addEventListener('click', function() {
+updateDisplay('-');
+loadDisplayIntoCalc();
+clickOperation = 'subtract';
+});
 
+//create EventListener for multiply
+var multiply = document.getElementById('multiply');
+multiply.addEventListener('click', function() {
+updateDisplay('×');
+loadDisplayIntoCalc();
+clickOperation = 'multiply';
+});
+
+//create EventListener for divide
+var divide = document.getElementById('divide');
+divide.addEventListener('click', function() {
+updateDisplay('÷');
+loadDisplayIntoCalc();
+clickOperation = 'divide';
+});
 
 var nine = document.getElementById('nine');
 nine.addEventListener('click',function() {
 updateDisplay('9');
 loadDisplayIntoCalc();
+addValue();
 });
 
 var eight = document.getElementById('eight');
@@ -112,3 +140,16 @@ clear.addEventListener('click', function() {
 	calc.clearMemory=parseFloat(display.innerHTML);
         display.innerHTML=clearDisplay();
 });
+
+var equalSign = document.getElementById('equalSign');
+equalSign.addEventListener('click', function(){
+if(clickOperation === 'add') {
+  
+}if(clickOperation === 'subtract') {
+  
+}if(clickOperation === 'multiply') {
+  
+}if(clickOperation === 'divide') {
+  
+}
+	});
