@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Cash Register</title>
-	<h1>Cash Register</h1>
+  <meta charset="UTF-8">
+  <title>Cash Register</title>
+  <h1>Cash Register</h1>
 </head>
 <style>
 table{
     border-width:1.5px;
     border-color: solid black;
-}	
+} 
+div{
+    border: 7px solid #778899;
+    height: 40px;
+    width:360px;
+    background-color:#808080;
+}
 </style>
 <body>
-
-
-
-<textarea id="textArea" rows="4" cols="50">
-</textarea>
+<div id="display"></div>
 <table>
 <tr>
   <td><input type="button" id="seven" value="     7    " ></td>
@@ -46,17 +48,8 @@ table{
   <td><input type="button" id="add" value="    +    " ></td>
   <td><input type="button" id="withdraw cash" value="   withdraw cash  " ></td>
 </tr>
-	<td><input type="button" id="=" value="     =    " ></td>
+  <td><input type="button" id="equalSign" value="     =    " ></td>
 </table>
-
-
-
-
-
-
-
-
-
 
 <script src="js/calculator.js"></script>  
 <script src="js/cash_register.js"></script>
