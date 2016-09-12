@@ -128,4 +128,5 @@ equalSign.addEventListener('click', function(){
 }if(clickOperation === 'divide') {
   storedNumber = parseFloat(display.innerHTML);
   display.innerHTML = calc.getTotal();
-}});
+}
+	});
