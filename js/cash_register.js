@@ -74,59 +74,9 @@ dot.addEventListener('click', function() {
 updateDisplay(.);
 });
 
-//load number, then clear display and then click on operation
-var add = document.getElementById('add');
-add.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML);
-	calc.load(storedNumber);
-	clearDisplay();
-	clickOperation='add';
-});
-
-var subtract = document.getElementById('subtract');
-subtract.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML);
-	calc.load(storedNumber);
-	clearDisplay();
-	clickOperation='subtract';
-});
-
-var multiply = document.getElementById('multiply');
-multiply.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML);
-	calc.load(storedNumber);
-	clearDisplay();
-	clickOperation='multiply';
-});
-
-var divide = document.getElementById('divide');
-divide.addEventListener('click', function() {
-	storedNumber=parseFloat(display.innerHTML);
-	calc.load(storedNumber);
-	clearDisplay();
-	clickOperation='divide';
-});
-
 var clear = document.getElementById('clear');
 clear.addEventListener('click', function() {
 	calc.clearMemory=parseFloat(display.innerHTML);
         display.innerHTML=clearDisplay();
-});
-
-//use if statement to determine what happens when a certain clickOperation is chosen
-var equalSign = document.getElementById('equalSign');
-equalSign.addEventListener('click', function(){
-  if(clickOperation === 'add') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
-}if(clickOperation === 'subtract') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
-}if(clickOperation === 'multiply') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
-}if(clickOperation === 'divide') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
 });
 
