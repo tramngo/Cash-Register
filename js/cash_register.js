@@ -1,13 +1,17 @@
 const calc = calculator();
-var clickOperation ='null';
-var storedNumber = calc.memory;
+var clickOperation='null';
+var storedNumber = 0;
 var display = document.getElementById('display');
-
 
 //create and use function to update display
 function updateDisplay(content){
    var display = document.getElementById('display');
    display.innerHTML = display.innerHTML + content;
+}
+
+//create and use function to clear display
+function clearDisplay() {
+   display.innerHTML = '';
 }
 
 var nine = document.getElementById('nine');
@@ -67,62 +71,11 @@ updateDisplay('00');
 
 var dot = document.getElementById('dot');
 dot.addEventListener('click', function() {
-updateDisplay('.');
-});
-
-//load number, then clear display and then click on operation
-var add = document.getElementById('add');
-add.addEventListener('click', function() {
-	calc.add=(parseFloat(display.innerHTML));
-	display.innerHTML='';
-	clickOperation='add';
-	display.innerHTML='+';
-});
-
-var subtract = document.getElementById('subtract');
-subtract.addEventListener('click', function() {
-	calc.load=(parseFloat(display.innerHTML));
-	display.innerHTML='';
-	clickOperation='subtract';
-	display.innerHTML='-';
-});
-
-var multiply = document.getElementById('multiply');
-multiply.addEventListener('click', function() {
-	calc.load=(parseFloat(display.innerHTML));
-	display.innerHTML='';
-	clickOperation='multiply';
-	display.innerHTML='*';
-});
-
-var divide = document.getElementById('divide');
-divide.addEventListener('click', function() {
-	calc.load=(parseFloat(display.innerHTML));
-	display.innerHTML='';
-	clickOperation='divide';
-	display.innerHTML='/';
+updateDisplay(.);
 });
 
 var clear = document.getElementById('clear');
 clear.addEventListener('click', function() {
-	calc.clearMemory=(parseFloat(display.innerHTML));
-        display.innerHTML='';
+	calc.clearMemory=parseFloat(display.innerHTML);
+        display.innerHTML=clearDisplay();
 });
-
-//use if statement to determine what happens when a certain clickOperation is chosen
-var equalSign = document.getElementById('equalSign');
-equalSign.addEventListener('click', function(){
-if(clickOperation === 'add') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
-}if(clickOperation === 'subtract') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
-}if(clickOperation === 'multiply') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
-}if(clickOperation === 'divide') {
-  storedNumber = parseFloat(display.innerHTML);
-  display.innerHTML = calc.getTotal();
-}
-	});
