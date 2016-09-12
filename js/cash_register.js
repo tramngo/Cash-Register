@@ -22,7 +22,7 @@ updateDisplay('9');
 var eight = document.getElementById('eight');
 eight.addEventListener('click',function() {
 updateDisplay('8');
-});
+
 
 var seven = document.getElementById('seven');
 seven.addEventListener('click',function() {
